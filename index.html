@@ -4,21 +4,128 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>iMango Studio</title>
+<meta name="description" content="iMango Studio makes cozy, offline casual games for Android. Our first game is Meow Paws, a cat tile-matching puzzle.">
+<link rel="icon" href="meow-paws/img/icon.png">
 <style>
-	:root { --bg: #fdf6ee; --text: #5a4236; --accent: #e8853f; }
-	@media (prefers-color-scheme: dark) { :root { --bg: #231c18; --text: #f1e4d8; --accent: #f5a565; } }
-	body { margin: 0; background: var(--bg); color: var(--text); font: 16px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
-	main { max-width: 720px; margin: 0 auto; padding: 32px 16px; }
-	h1 { color: var(--accent); }
+	:root {
+		--bg: #fdf6ee;
+		--panel: #fffaf4;
+		--text: #5a4236;
+		--muted: #8a7366;
+		--accent: #e8853f;
+		--accent-text: #ffffff;
+		--line: #ecdccb;
+	}
+	@media (prefers-color-scheme: dark) {
+		:root:not([data-theme="light"]) {
+			--bg: #231c18;
+			--panel: #2d2420;
+			--text: #f1e4d8;
+			--muted: #bba595;
+			--accent: #f5a565;
+			--accent-text: #2d2420;
+			--line: #4a3b33;
+		}
+	}
+	:root[data-theme="dark"] {
+		--bg: #231c18;
+		--panel: #2d2420;
+		--text: #f1e4d8;
+		--muted: #bba595;
+		--accent: #f5a565;
+		--accent-text: #2d2420;
+		--line: #4a3b33;
+	}
+	* { box-sizing: border-box; }
+	body {
+		margin: 0;
+		background: var(--bg);
+		color: var(--text);
+		font: 16px/1.65 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+	}
+	main { max-width: 820px; margin: 0 auto; padding: 40px 16px 64px; }
+	header { text-align: center; margin-bottom: 36px; }
+	header h1 { margin: 0; font-size: 2.2rem; color: var(--accent); }
+	header p { margin: 6px 0 0; color: var(--muted); }
+	h2 { margin: 0 0 4px; font-size: 1.5rem; }
+	h3 { margin: 24px 0 8px; font-size: 1.05rem; }
+	section {
+		background: var(--panel);
+		border: 1px solid var(--line);
+		border-radius: 20px;
+		padding: 24px;
+		margin-bottom: 24px;
+	}
+	.game-head { display: flex; gap: 18px; align-items: center; }
+	.game-head img { width: 88px; height: 88px; border-radius: 22px; flex: none; }
+	.tagline { margin: 0; color: var(--muted); }
+	.feature { width: 100%; height: auto; border-radius: 14px; margin: 20px 0 4px; display: block; }
+	ul { padding-left: 1.2em; margin: 0; }
+	.shots { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 20px; }
+	.shots img { width: 100%; height: auto; border-radius: 12px; border: 1px solid var(--line); }
+	.links { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 22px; }
+	.btn {
+		padding: 9px 18px;
+		border-radius: 999px;
+		border: 1px solid var(--line);
+		color: var(--text);
+		text-decoration: none;
+		background: var(--bg);
+	}
+	.btn.primary { background: var(--accent); border-color: var(--accent); color: var(--accent-text); font-weight: 600; }
 	a { color: var(--accent); }
+	footer { color: var(--muted); font-size: 0.9rem; text-align: center; }
+	@media (max-width: 520px) {
+		.game-head img { width: 64px; height: 64px; border-radius: 16px; }
+		h2 { font-size: 1.3rem; }
+	}
 </style>
 </head>
 <body>
 <main>
-	<h1>iMango Studio</h1>
-	<h2>Meow Paws</h2>
-	<p><a href="meow-paws/privacy/">Privacy Policy · Chính sách quyền riêng tư</a></p>
-	<p>Contact: <a href="mailto:dangmixxdeveloper@gmail.com">dangmixxdeveloper@gmail.com</a></p>
+	<header>
+		<h1>iMango Studio</h1>
+		<p>Cozy casual games for Android · Game giải trí nhẹ nhàng cho Android</p>
+	</header>
+
+	<section id="meow-paws">
+		<div class="game-head">
+			<img src="meow-paws/img/icon.png" alt="Meow Paws icon">
+			<div>
+				<h2>Meow Paws</h2>
+				<p class="tagline">Tap cute cat tiles, match three of a kind and clear the board.</p>
+			</div>
+		</div>
+
+		<img class="feature" src="meow-paws/img/feature.png" alt="Meow Paws: cat tiles on a cozy board">
+
+		<h3>How to play</h3>
+		<ul>
+			<li>Tap tiles that are not covered by others to send them to your tray.</li>
+			<li>Three matching tiles in the tray clear away. The tray holds seven tiles, so plan ahead.</li>
+			<li>Clear every tile to finish the level. Match quickly for combos.</li>
+			<li>Seasonal events with special levels, outfits for the cat mascot and an Advent calendar.</li>
+			<li>Plays fully offline, no ads, no sign-in.</li>
+		</ul>
+
+		<div class="shots">
+			<img src="meow-paws/img/01_gameplay.png" alt="Gameplay screen" loading="lazy">
+			<img src="meow-paws/img/02_menu.png" alt="Main menu" loading="lazy">
+			<img src="meow-paws/img/06_halloween_game.png" alt="Halloween event level" loading="lazy">
+		</div>
+
+		<div class="links">
+			<a class="btn primary" href="https://play.google.com/store/apps/details?id=com.imangostudio.meowpaws">Google Play</a>
+			<a class="btn" href="meow-paws/privacy/">Privacy Policy · Chính sách quyền riêng tư</a>
+		</div>
+	</section>
+
+	<section id="contact">
+		<h2>Contact · Liên hệ</h2>
+		<p>Support, feedback and business enquiries: <a href="mailto:dangmixxdeveloper@gmail.com">dangmixxdeveloper@gmail.com</a></p>
+	</section>
+
+	<footer>© 2026 iMango Studio</footer>
 </main>
 </body>
 </html>
