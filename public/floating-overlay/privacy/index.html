@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Floating Overlay — Privacy Policy</title>
+<!-- REL-02. Source of truth: this file (docs/privacy/index.html in the app repo). Published from the
+     public repo dangmixx/imangostudio (Firebase Hosting) as public/floating-overlay/privacy/index.html.
+     Keep it in step with the Data safety answers in docs/PLAY.md whenever a permission, SDK or stored
+     field is added or removed. -->
+<style>
+	:root { --bg: #f2f6fc; --card: #ffffff; --ink: #1b2533; --muted: #5f6b7a; --edge: #d6e2f2; --accent: #0d6fd8; }
+	@media (prefers-color-scheme: dark) {
+		:root { --bg: #0f141b; --card: #18202a; --ink: #e6edf5; --muted: #9aa8b8; --edge: #2a3644; --accent: #6fb2ff; }
+	}
+	* { box-sizing: border-box; }
+	body { margin: 0; background: var(--bg); color: var(--ink); font: 16px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+	main { max-width: 760px; margin: 0 auto; padding: 32px 16px 64px; }
+	article { background: var(--card); border: 2px solid var(--edge); border-radius: 20px; padding: 24px 22px; margin-bottom: 28px; }
+	h1 { font-size: 1.7rem; margin: 0 0 4px; }
+	h2 { font-size: 1.15rem; margin: 28px 0 6px; }
+	p, li { margin: 6px 0; }
+	.meta { color: var(--muted); font-size: .92rem; }
+	a { color: var(--accent); }
+	table { border-collapse: collapse; width: 100%; font-size: .95rem; }
+	th, td { text-align: left; vertical-align: top; padding: 8px 6px; border-top: 1px solid var(--edge); }
+	.wrap { overflow-x: auto; }
+	.back { display: inline-block; margin-bottom: 16px; text-decoration: none; }
+</style>
+</head>
+<body>
+<main>
+<a class="back" href="../">← Floating Overlay</a>
+
+<article id="en" lang="en">
+<h1>Floating Overlay — Privacy Policy</h1>
+<p class="meta">iMango Studio · Effective date: 2026-10-13</p>
+
+<p>Floating Overlay ("the app") is an Android utility made by iMango Studio ("we"). It shows a small floating panel above other apps with the date and time, the name of the app you are using and a label you write, plus a screenshot button. This policy explains what the app handles and why.</p>
+
+<h2>1. Summary</h2>
+<p>The app does not collect any personal or device data. It has no internet permission, so nothing it handles can leave your phone. There are no accounts, no ads, no analytics and no third-party SDKs that send data. We don't sell or share any data.</p>
+
+<h2>2. What the app accesses on your device</h2>
+<div class="wrap"><table>
+<tr><th>Access</th><th>Why</th><th>What happens to it</th></tr>
+<tr><td>Display over other apps</td><td>Draw the floating panel on top of other apps</td><td>Shown on screen only</td></tr>
+<tr><td>Usage access</td><td>Read which app is currently in the foreground, to show its name on the panel</td><td>Only the latest app is read; it is kept in memory and never saved or sent</td></tr>
+<tr><td>Screen capture (Android's screen-sharing dialog)</td><td>Take a screenshot when you tap the camera button, after you approve the system dialog</td><td>Saved as a PNG file in <code>Pictures/Screenshots/FloatingOverlay</code> on your device only</td></tr>
+<tr><td>Notifications</td><td>Show the notification Android requires while the panel or a capture session is running, with Hide / Settings / Turn off / Stop buttons</td><td>Local only</td></tr>
+<tr><td>Storage (Android 8–9 only)</td><td>Save screenshots to the Pictures folder</td><td>Local only</td></tr>
+</table></div>
+<p>You can turn any of these off in Android settings at any time; the app keeps working with what is left (for example, without usage access the panel shows no app name).</p>
+
+<h2>3. Data stored on your device</h2>
+<p>Your settings (panel size, position, opacity, date format, language, capture mode) and your custom label are saved in the app's private storage on your phone. They are excluded from Android's cloud backup and device transfer. Uninstalling the app or clearing its data removes them. Screenshots stay in your Pictures folder until you delete them.</p>
+
+<h2>4. Children</h2>
+<p>Floating Overlay is not directed at children under 13. The app collects no data from anyone, including children.</p>
+
+<h2>5. Changes</h2>
+<p>If this policy changes, we update this page and the effective date above.</p>
+
+<h2>6. Contact</h2>
+<p>iMango Studio · <a href="mailto:dangmixxdeveloper@gmail.com">dangmixxdeveloper@gmail.com</a></p>
+</article>
+</main>
+</body>
+</html>
