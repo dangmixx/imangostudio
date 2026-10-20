@@ -8,15 +8,12 @@
      before an app has its own page at /<app>/privacy/. Once an app ships its own policy, point its
      Play Console "Privacy policy" URL there instead. Only valid for builds that collect nothing:
      no internet-based SDKs (analytics, ads, crash reporting, leaderboards, accounts). -->
+<link rel="stylesheet" href="../theme.css">
 <style>
-	:root { --bg: #fff8ef; --card: #ffffff; --ink: #2b2118; --muted: #6f6256; --edge: #f0dcc2; --accent: #d9741a; }
-	@media (prefers-color-scheme: dark) {
-		:root { --bg: #17120d; --card: #221b14; --ink: #f3ebe2; --muted: #b3a597; --edge: #3a2f24; --accent: #ffae5c; }
-	}
 	* { box-sizing: border-box; }
-	body { margin: 0; background: var(--bg); color: var(--ink); font: 16px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+	body { margin: 0; background: var(--bg); color: var(--text); font: 16px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
 	main { max-width: 760px; margin: 0 auto; padding: 32px 16px 64px; }
-	article { background: var(--card); border: 2px solid var(--edge); border-radius: 20px; padding: 24px 22px; margin-bottom: 28px; }
+	article { background: var(--panel); border: 2px solid var(--line); border-radius: 20px; padding: 24px 22px; margin-bottom: 28px; }
 	h1 { font-size: 1.7rem; margin: 0 0 4px; }
 	h2 { font-size: 1.15rem; margin: 28px 0 6px; }
 	p, li { margin: 6px 0; }
