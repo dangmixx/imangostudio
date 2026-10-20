@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Manglo</title>
+<meta name="description" content="Manglo, a photo filter and editor for Android by iMango Studio. Filters that keep skin tones natural; every edit stays on your phone.">
+<link rel="icon" href="img/icon.png" type="image/png">
+<style>
+	:root {
+		--bg: #fff6ec;
+		--panel: #ffffff;
+		--text: #3b2a1e;
+		--muted: #7d6a5c;
+		--accent: #b8603a;
+		--accent-text: #ffffff;
+		--line: #fbd9c6;
+	}
+	@media (prefers-color-scheme: dark) {
+		:root:not([data-theme="light"]) {
+			--bg: #1f1611;
+			--panel: #2a1e16;
+			--text: #f6ebe2;
+			--muted: #b9a596;
+			--accent: #f2a27e;
+			--accent-text: #2a1e16;
+			--line: #4a3527;
+		}
+	}
+	:root[data-theme="dark"] {
+		--bg: #1f1611;
+		--panel: #2a1e16;
+		--text: #f6ebe2;
+		--muted: #b9a596;
+		--accent: #f2a27e;
+		--accent-text: #2a1e16;
+		--line: #4a3527;
+	}
+	* { box-sizing: border-box; }
+	body {
+		margin: 0;
+		background: var(--bg);
+		color: var(--text);
+		font: 16px/1.65 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+	}
+	main { max-width: 820px; margin: 0 auto; padding: 24px 16px 64px; }
+	.back { display: inline-block; margin-bottom: 16px; text-decoration: none; }
+	h1 { margin: 0; font-size: 1.8rem; }
+	h2 { margin: 24px 0 8px; font-size: 1.05rem; }
+	section {
+		background: var(--panel);
+		border: 1px solid var(--line);
+		border-radius: 20px;
+		padding: 24px;
+		margin-bottom: 24px;
+	}
+	.head { display: flex; gap: 18px; align-items: center; }
+	.head img { width: 88px; height: 88px; border-radius: 22px; flex: none; }
+	.tagline { margin: 0; color: var(--muted); }
+	.feature { width: 100%; height: auto; border-radius: 14px; margin: 20px 0 4px; display: block; }
+	ul { padding-left: 1.2em; margin: 0; }
+	.links { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 22px; }
+	.btn {
+		padding: 9px 18px;
+		border-radius: 999px;
+		border: 1px solid var(--line);
+		color: var(--text);
+		text-decoration: none;
+		background: var(--bg);
+	}
+	.btn.soon { color: var(--muted); border-style: dashed; }
+	a { color: var(--accent); }
+	footer { color: var(--muted); font-size: 0.9rem; text-align: center; }
+	@media (max-width: 520px) {
+		.head img { width: 64px; height: 64px; border-radius: 16px; }
+		h1 { font-size: 1.4rem; }
+	}
+</style>
+</head>
+<body>
+<main>
+	<a class="back" href="../">← iMango Studio</a>
+
+	<section>
+		<div class="head">
+			<img src="img/icon.png" alt="Manglo icon">
+			<div>
+				<h1>Manglo</h1>
+				<p class="tagline">Beautiful filters. Natural you. A simple photo editor that keeps skin tones natural, with every edit done on your phone.</p>
+			</div>
+		</div>
+
+		<img class="feature" src="img/feature.png" alt="Manglo feature graphic showing Natural, Warm, Film and Fresh filters">
+
+		<h2>Features</h2>
+		<ul>
+			<li>Filters such as Natural, Soft, Warm, Film and Fresh, tuned so skin doesn't turn orange, red or grey, each with a strength slider.</li>
+			<li>Save your own looks (filter, strength and adjustments) and apply them to any photo in one tap.</li>
+			<li>Brightness, contrast and saturation; crop freely or to 1:1, 4:5, 9:16; rotate and flip; hold to compare with the original; undo and redo.</li>
+			<li>Saves at full resolution, even 48 MP photos, as JPEG or lossless PNG. Location data is removed from saved photos by default.</li>
+			<li>Free, no ads, no account. The app has no internet access, so your photos never leave your phone.</li>
+		</ul>
+
+		<div class="links">
+			<span class="btn soon">Google Play · coming soon</span>
+			<a class="btn" href="privacy/">Privacy Policy</a>
+		</div>
+	</section>
+
+	<footer>© 2026 iMango Studio · <a href="mailto:dangmixxdeveloper@gmail.com">dangmixxdeveloper@gmail.com</a></footer>
+</main>
+</body>
+</html>
