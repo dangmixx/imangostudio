@@ -43,6 +43,7 @@ Một bảng màu cho toàn site, lấy từ trang /floating-overlay/. Không d�
 
 - Dark mode theo `prefers-color-scheme`; `data-theme="light"` / `"dark"` trên `<html>` ép theo ý. Cả hai đã nằm trong `theme.css`, trang không cần làm gì thêm.
 - Đổi màu thì chỉ sửa `theme.css`, rồi chép y hệt sang khối `:root` trong `404.html`. `404.html` là ngoại lệ duy nhất: nó được trả về ở mọi độ sâu và trên 2 gốc khác nhau nên không link `theme.css` được.
+- Badge Google Play dùng token riêng `--badge-bg` / `--badge-text` / `--badge-line` (đen như badge chính thức, giống nhau ở cả 2 theme). Logo Play là ảnh SVG nên có màu riêng.
 - Màu thương hiệu của từng app chỉ nằm trong ảnh (icon, feature graphic, ảnh chụp), không nằm trong CSS.
 
 ## Bố cục và chữ
@@ -56,9 +57,13 @@ Một bảng màu cho toàn site, lấy từ trang /floating-overlay/. Không d�
 ## Thêm app mới
 
 1. Chép `public/floating-overlay/` làm khung (trang app + privacy), đổi nội dung, ảnh để trong `img/`.
-2. Thêm thẻ `.game` vào `public/index.html` (icon, tên, `<Thể loại> · <Nền tảng>`).
-3. Privacy: nêu đúng những gì app thực sự làm (quyền, SDK, quảng cáo, dữ liệu lưu trên máy). Đầu file có comment chỉ ra bản gốc trong repo app và nhắc giữ khớp với Data safety. Khi đổi nội dung thì cập nhật "Effective date".
-4. App chưa có privacy riêng (closed test) dùng `privacy/` chung, nhưng chỉ khi app không thu thập gì: không có quảng cáo, analytics, crash report, leaderboard, tài khoản.
+2. Nút tải trong `.links` dùng badge chung `.store-badge` (style trong `theme.css`, icon trong `public/img/`):
+   - App đã public: `<a class="store-badge" href="https://play.google.com/store/apps/details?id=<package>"><img src="../img/google-play.svg" alt=""><span><small>Get it on</small><strong>Google Play</strong></span></a>`
+   - App còn closed test: như trên nhưng `href="https://play.google.com/apps/testing/<package>"`, icon `google-play-test.svg`, dòng nhỏ `Join the test on`, và thêm `<span class="btn soon">Google Play · coming soon</span>` ngay sau.
+   - Khi app lên production: đổi badge test sang badge public, bỏ "coming soon". Link `details?id=` của app chưa public trả 404 với người ngoài, nên không dùng trước lúc đó.
+3. Thêm thẻ `.game` vào `public/index.html` (icon, tên, `<Thể loại> · <Nền tảng>`).
+4. Privacy: nêu đúng những gì app thực sự làm (quyền, SDK, quảng cáo, dữ liệu lưu trên máy). Đầu file có comment chỉ ra bản gốc trong repo app và nhắc giữ khớp với Data safety. Khi đổi nội dung thì cập nhật "Effective date".
+5. App chưa có privacy riêng (closed test) dùng `privacy/` chung, nhưng chỉ khi app không thu thập gì: không có quảng cáo, analytics, crash report, leaderboard, tài khoản.
 
 ## Kiểm tra trước khi commit
 

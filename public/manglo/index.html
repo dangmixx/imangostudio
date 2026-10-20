@@ -31,7 +31,7 @@
 	.tagline { margin: 0; color: var(--muted); }
 	.feature { width: 100%; height: auto; border-radius: 14px; margin: 20px 0 4px; display: block; }
 	ul { padding-left: 1.2em; margin: 0; }
-	.links { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 22px; }
+	.links { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; margin-top: 22px; }
 	.btn {
 		padding: 9px 18px;
 		border-radius: 999px;
@@ -41,6 +41,7 @@
 		background: var(--bg);
 	}
 	.btn.soon { color: var(--muted); border-style: dashed; }
+	.btn.primary { background: var(--accent); border-color: var(--accent); color: var(--accent-text); font-weight: 600; }
 	a { color: var(--accent); }
 	footer { color: var(--muted); font-size: 0.9rem; text-align: center; }
 	@media (max-width: 520px) {
@@ -74,6 +75,7 @@
 		</ul>
 
 		<div class="links">
+			<a class="store-badge" href="https://play.google.com/apps/testing/com.imangostudio.manglo"><img src="../img/google-play-test.svg" alt=""><span><small>Join the test on</small><strong>Google Play</strong></span></a>
 			<span class="btn soon">Google Play · coming soon</span>
 			<a class="btn" href="privacy/">Privacy Policy</a>
 		</div>

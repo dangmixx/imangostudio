@@ -1,4 +1,4 @@
-/* iMango Studio site colors. The only place colors are defined: every page links this file
+/* iMango Studio site colors (and the shared store badge below). The only place colors are defined: every page links this file
    (relative path, e.g. ../theme.css) and uses these tokens; see "Site style" in CLAUDE.md. */
 :root {
 	--bg: #f2f6fc;
@@ -32,3 +32,23 @@
 	--line: #2a3644;
 	color-scheme: dark;
 }
+
+/* Google Play badge, shared by every app page (see "Nút tải" in CLAUDE.md). Black like Google's
+   official badge in both themes; the border keeps it visible on the dark background. */
+:root { --badge-bg: #000000; --badge-text: #ffffff; --badge-line: #a6a6a6; }
+.store-badge {
+	display: inline-flex;
+	align-items: center;
+	gap: 10px;
+	padding: 6px 16px 6px 12px;
+	border-radius: 10px;
+	border: 1px solid var(--badge-line);
+	background: var(--badge-bg);
+	color: var(--badge-text);
+	text-decoration: none;
+	line-height: 1.15;
+}
+.store-badge img { width: 26px; height: 26px; flex: none; }
+.store-badge small { display: block; font-size: 0.68rem; letter-spacing: 0.04em; text-transform: uppercase; }
+.store-badge strong { display: block; font-size: 1.1rem; font-weight: 600; }
+.store-badge:hover { opacity: 0.88; }
