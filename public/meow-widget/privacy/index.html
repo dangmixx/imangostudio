@@ -36,7 +36,7 @@
 <p>Meow Widget ("the app") is an Android virtual pet made by iMango Studio ("we"): a cat you feed, pet and play with, which can also float above your other apps. This policy explains what the app handles and why.</p>
 
 <h2>1. Summary</h2>
-<p>Your cat lives entirely on your phone. We (iMango Studio) don't collect any personal data: there are no accounts, no analytics and no servers of ours that receive data from the app. The app includes Google's AdMob SDK so that the Settings screen may show a banner ad; when it does, the AdMob SDK collects some device data to show ads, as described in section 4. The main screen and the floating cat never show ads. Your cat, its name, its history and your settings stay on your phone and are never shared with AdMob or anyone else. We don't sell any data.</p>
+<p>Your cat lives entirely on your phone. We (iMango Studio) don't collect any personal data: there are no accounts, no analytics and no servers of ours that receive data from the app. If the app crashes, it sends a technical crash report through Google's Firebase Crashlytics so we can fix the bug (section 5); you can turn this off in Settings. The app also includes Google's AdMob SDK so that the Settings screen may show a banner ad; when it does, the AdMob SDK collects some device data to show ads, as described in section 4. The main screen and the floating cat never show ads. Your cat, its name, its history and your settings stay on your phone and are never shared with AdMob or anyone else. We don't sell any data.</p>
 
 <h2>2. What the app accesses on your device</h2>
 <div class="wrap"><table>
@@ -45,7 +45,8 @@
 <tr><td>Foreground service</td><td>Keep the floating cat on screen while you use other apps</td><td>Runs on your phone only; stops when you turn floating mode off</td></tr>
 <tr><td>Notifications</td><td>Show the notification Android requires while the cat floats, with Hide / Show / Turn off buttons</td><td>Local only; the app sends no other notifications</td></tr>
 <tr><td>Vibration (haptic feedback)</td><td>A short tick when you pick the floating cat up or drag it over the ✕</td><td>Local only</td></tr>
-<tr><td>Internet and advertising ID</td><td>Used only by the Google AdMob SDK, to load the banner ad on the Settings screen</td><td>Sent to Google to request and measure ads, see section 4</td></tr>
+<tr><td>Internet</td><td>Send crash reports (section 5) and, through the Google AdMob SDK, load the banner ad on the Settings screen (section 4)</td><td>See sections 4 and 5</td></tr>
+<tr><td>Advertising ID</td><td>Used only by the Google AdMob SDK</td><td>Sent to Google to request and measure ads, see section 4</td></tr>
 </table></div>
 <p>You can turn off display over other apps and notifications in Android settings at any time. Without them your cat simply stays inside the app.</p>
 
@@ -63,13 +64,22 @@
 <p>This data goes directly to Google, not to us, and is handled under <a href="https://policies.google.com/privacy" rel="noopener">Google's Privacy Policy</a>. See <a href="https://policies.google.com/technologies/partner-sites" rel="noopener">how Google uses information from apps that use its services</a>.</p>
 <p>In the European Economic Area, the United Kingdom and Switzerland, the app asks for your consent with Google's consent form before any ad is requested, and you can change your choice at any time in Settings → Ad privacy choices. Anywhere, you can limit personalized ads by resetting or deleting your advertising ID in Android settings (Settings → Privacy → Ads, or Settings → Google → Ads, depending on your phone). If your phone is offline or no ad is available, no banner is shown.</p>
 
-<h2>5. Children</h2>
-<p>Meow Widget does not knowingly collect personal information from children. The app itself collects nothing; ads, where shown, come from Google AdMob as described in section 4. There are no purchases, no chat and no way to share data with other people.</p>
+<h2>5. Crash reports (Firebase Crashlytics)</h2>
+<p>When the app crashes, Firebase Crashlytics, a service run by Google for us, sends a crash report so we can find and fix the problem. A report contains:</p>
+<ul>
+<li>The technical details of the crash (which code failed, the app version)</li>
+<li>Your phone's model, Android version, available memory and storage, and whether it is rooted</li>
+<li>A random identifier for this installation of the app, not linked to you or to your advertising ID</li>
+</ul>
+<p>Reports never include your cat, its name, its history or your settings. They are kept by Firebase for 90 days and used only to fix bugs; see <a href="https://firebase.google.com/support/privacy" rel="noopener">Privacy and Security in Firebase</a>. To stop sending them, turn off Settings → Send crash reports.</p>
 
-<h2>6. Changes</h2>
+<h2>6. Children</h2>
+<p>Meow Widget does not knowingly collect personal information from children. The app collects nothing about the person using it; crash reports (section 5) are technical only, and ads, where shown, come from Google AdMob as described in section 4. There are no purchases, no chat and no way to share data with other people.</p>
+
+<h2>7. Changes</h2>
 <p>If this policy changes, we update this page and the effective date above.</p>
 
-<h2>7. Contact</h2>
+<h2>8. Contact</h2>
 <p>iMango Studio · <a href="mailto:dangmixxdeveloper@gmail.com">dangmixxdeveloper@gmail.com</a></p>
 </article>
 </main>
