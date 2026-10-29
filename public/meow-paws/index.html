@@ -9,7 +9,11 @@
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
 
-  gtag('config', 'G-159BYFM0MK');
+  gtag('config', 'G-159BYFM0MK', { content_group: 'meow-paws' });
+  document.addEventListener('click', function (e) {
+    var a = e.target.closest('.store-badge');
+    if (a) gtag('event', 'store_click', { app: 'meow-paws', link_type: a.href.indexOf('/apps/testing/') > -1 ? 'test' : 'public' });
+  });
 </script>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Meow Paws</title>
@@ -93,7 +97,7 @@
 		</div>
 
 		<div class="links">
-			<a class="store-badge" href="https://play.google.com/store/apps/details?id=com.imangostudio.meowpaws"><img src="../img/google-play.svg" alt=""><span><small>Get it on</small><strong>Google Play</strong></span></a>
+			<a class="store-badge" href="https://play.google.com/store/apps/details?id=com.imangostudio.meowpaws&amp;referrer=utm_source%3Dimangostudio%26utm_medium%3Dwebsite%26utm_campaign%3Dmeow-paws"><img src="../img/google-play.svg" alt=""><span><small>Get it on</small><strong>Google Play</strong></span></a>
 			<a class="btn" href="privacy/">Privacy Policy</a>
 		</div>
 	</section>

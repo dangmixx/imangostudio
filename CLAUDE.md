@@ -58,12 +58,20 @@ Một bảng màu cho toàn site, lấy từ trang /floating-overlay/. Không d�
 
 1. Chép `public/floating-overlay/` làm khung (trang app + privacy), đổi nội dung, ảnh để trong `img/`.
 2. Nút tải trong `.links` dùng badge chung `.store-badge` (style trong `theme.css`, icon trong `public/img/`):
-   - App đã public: `<a class="store-badge" href="https://play.google.com/store/apps/details?id=<package>"><img src="../img/google-play.svg" alt=""><span><small>Get it on</small><strong>Google Play</strong></span></a>`
+   - App đã public: `<a class="store-badge" href="https://play.google.com/store/apps/details?id=<package>&amp;referrer=utm_source%3Dimangostudio%26utm_medium%3Dwebsite%26utm_campaign%3D<slug>"><img src="../img/google-play.svg" alt=""><span><small>Get it on</small><strong>Google Play</strong></span></a>`
    - App còn closed test: như trên nhưng `href="https://play.google.com/apps/testing/<package>"`, icon `google-play-test.svg`, dòng nhỏ `Join the test on`, và thêm `<span class="btn soon">Google Play · coming soon</span>` ngay sau.
-   - Khi app lên production: đổi badge test sang badge public, bỏ "coming soon". Link `details?id=` của app chưa public trả 404 với người ngoài, nên không dùng trước lúc đó.
+   - Khi app lên production: đổi badge test sang badge public (kèm `referrer` UTM như trên), bỏ "coming soon". Link `details?id=` của app chưa public trả 404 với người ngoài, nên không dùng trước lúc đó.
 3. Thêm thẻ `.game` vào `public/index.html` (icon, tên, `<Thể loại> · <Nền tảng>`).
 4. Privacy: nêu đúng những gì app thực sự làm (quyền, SDK, quảng cáo, dữ liệu lưu trên máy). Đầu file có comment chỉ ra bản gốc trong repo app và nhắc giữ khớp với Data safety. Khi đổi nội dung thì cập nhật "Effective date".
 5. App chưa có privacy riêng (closed test) dùng `privacy/` chung, nhưng chỉ khi app không thu thập gì: không có quảng cáo, analytics, crash report, leaderboard, tài khoản.
+
+## Google Analytics
+
+Mọi trang có GA4 tag `G-159BYFM0MK` ngay sau `<meta charset>`, kể cả `404.html`. Trang mới chép nguyên khối đó và đổi `content_group`:
+
+- `content_group` = slug app cho cả trang app lẫn privacy của nó; `home` cho trang chủ, `privacy` cho privacy chung, `404` cho trang lỗi.
+- Trang có `.store-badge` thêm listener gửi event `store_click` (`app` = slug, `link_type` = `test` / `public`), chép từ trang app có sẵn.
+- Privacy chung (`privacy/`, mục "This website") mô tả GA4 trên site. Đổi cách đo thì cập nhật mục đó.
 
 ## Kiểm tra trước khi commit
 

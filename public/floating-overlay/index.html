@@ -9,7 +9,11 @@
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
 
-  gtag('config', 'G-159BYFM0MK');
+  gtag('config', 'G-159BYFM0MK', { content_group: 'floating-overlay' });
+  document.addEventListener('click', function (e) {
+    var a = e.target.closest('.store-badge');
+    if (a) gtag('event', 'store_click', { app: 'floating-overlay', link_type: a.href.indexOf('/apps/testing/') > -1 ? 'test' : 'public' });
+  });
 </script>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Floating Overlay</title>

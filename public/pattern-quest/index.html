@@ -9,7 +9,11 @@
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
 
-  gtag('config', 'G-159BYFM0MK');
+  gtag('config', 'G-159BYFM0MK', { content_group: 'pattern-quest' });
+  document.addEventListener('click', function (e) {
+    var a = e.target.closest('.store-badge');
+    if (a) gtag('event', 'store_click', { app: 'pattern-quest', link_type: a.href.indexOf('/apps/testing/') > -1 ? 'test' : 'public' });
+  });
 </script>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Meow Paws: Pattern Quest</title>
@@ -51,7 +55,6 @@
 		text-decoration: none;
 		background: var(--bg);
 	}
-	.btn.soon { color: var(--muted); border-style: dashed; }
 	.btn.primary { background: var(--accent); border-color: var(--accent); color: var(--accent-text); font-weight: 600; }
 	a { color: var(--accent); }
 	footer { color: var(--muted); font-size: 0.9rem; text-align: center; }
@@ -92,8 +95,7 @@
 		</div>
 
 		<div class="links">
-			<a class="store-badge" href="https://play.google.com/apps/testing/com.imangostudio.patternquest"><img src="../img/google-play-test.svg" alt=""><span><small>Join the test on</small><strong>Google Play</strong></span></a>
-			<span class="btn soon">Google Play · coming soon</span>
+			<a class="store-badge" href="https://play.google.com/store/apps/details?id=com.imangostudio.patternquest&amp;referrer=utm_source%3Dimangostudio%26utm_medium%3Dwebsite%26utm_campaign%3Dpattern-quest"><img src="../img/google-play.svg" alt=""><span><small>Get it on</small><strong>Google Play</strong></span></a>
 			<a class="btn" href="privacy/">Privacy Policy</a>
 		</div>
 	</section>
