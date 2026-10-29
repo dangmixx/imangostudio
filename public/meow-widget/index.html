@@ -31,8 +31,8 @@
 	.tagline { margin: 0; color: var(--muted); }
 	.feature { width: 100%; height: auto; border-radius: 14px; margin: 20px 0 4px; display: block; }
 	ul { padding-left: 1.2em; margin: 0; }
-	.shots { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 20px; }
-	.shots img { width: 100%; height: auto; border-radius: 12px; border: 1px solid var(--line); }
+	.shots { display: flex; justify-content: center; gap: 12px; margin-top: 20px; }
+	.shots img { height: 380px; width: auto; flex: none; border-radius: 12px; border: 1px solid var(--line); }
 	.links { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; margin-top: 22px; }
 	.btn {
 		padding: 9px 18px;
@@ -48,6 +48,7 @@
 	@media (max-width: 520px) {
 		.head img { width: 64px; height: 64px; border-radius: 16px; }
 		h1 { font-size: 1.4rem; }
+		.shots img { height: 300px; }
 	}
 </style>
 </head>
@@ -64,23 +65,25 @@
 			</div>
 		</div>
 
-		<img class="feature" src="img/feature.png" alt="Meow Widget: a calico cat sitting next to the app's name">
+		<img class="feature" src="img/feature.png" alt="Meow Widget: take care of Mochi, play, daily scenes, dress up, keep Mochi happy and Mochi on your screen">
 
 		<h2>Features</h2>
 		<ul>
-			<li>Feed, pet and play with your cat a little every day; its mood and energy follow how you care for it.</li>
+			<li>Feed, pet and play with your cat a little every day; its mood, energy and fullness follow how you care for it.</li>
 			<li>Tap it to play, stroke its back and it leans into your finger, purrs and sends up hearts.</li>
-			<li>Happy hops, little walks, and a sleepy cat with floating "z"s at night or when it is tired.</li>
-			<li>Floating mode: your cat sits in a corner of the screen above any app. Hold it to move it, drop it on ✕ to send it home.</li>
-			<li>Three sizes, an occasional stroll along the screen, and meows and purrs if you want them.</li>
+			<li>Friendship levels that grow with every bit of care, from "New Cat" to "Soulmate", and a diary of meals, pets, play and outings.</li>
+			<li>Now and then your cat heads out for a stroll and brings you back a gift.</li>
+			<li>Its room changes through the day: living room in the morning, desk in the afternoon, balcony at sunset, bedroom at night.</li>
+			<li>Floating mode: your cat sits in a corner of the screen above any app. Hold it to move it, drop it on ✕ to send it home, double-tap it to open the app.</li>
+			<li>Three sizes and adjustable transparency, an occasional walk along the screen, meows and purrs with quiet hours at night.</li>
+			<li>Optional reminders when your cat is hungry, and a backup file to bring your cat to a new phone.</li>
 			<li>English, Vietnamese, Japanese, Simplified Chinese and French.</li>
-			<li>No analytics and no account; your cat stays on your phone. A small banner ad from Google AdMob may sit on the settings screen; the cat and the floating cat are always ad-free.</li>
+			<li>No account and no ad tracking; your cat and its name stay on your phone. Only anonymous usage statistics and crash reports are sent, and you can turn both off in Settings.</li>
 		</ul>
 
 		<div class="shots">
-			<img src="img/01-care.png" alt="The main screen with the cat, its mood and energy, and Feed, Pet and Play buttons">
-			<img src="img/03-moods.png" alt="The cat happy, sleepy and being petted">
-			<img src="img/04-settings.png" alt="Settings for the floating cat: size, wandering and sound">
+			<img src="img/shot_1.webp" alt="Take care of Mochi: the home screen with mood, energy and fullness, and Feed, Pet and Play" loading="lazy">
+			<img src="img/shot_2.webp" alt="Play and interact: Mochi happy, sleeping, playing, sitting, lying down and stretching" loading="lazy">
 		</div>
 
 		<div class="links">

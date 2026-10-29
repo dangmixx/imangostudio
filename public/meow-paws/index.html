@@ -31,8 +31,8 @@
 	.tagline { margin: 0; color: var(--muted); }
 	.feature { width: 100%; height: auto; border-radius: 14px; margin: 20px 0 4px; display: block; }
 	ul { padding-left: 1.2em; margin: 0; }
-	.shots { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 20px; }
-	.shots img { width: 100%; height: auto; border-radius: 12px; border: 1px solid var(--line); }
+	.shots { display: flex; gap: 12px; margin-top: 20px; overflow-x: auto; padding-bottom: 6px; }
+	.shots img { height: 380px; width: auto; flex: none; border-radius: 12px; border: 1px solid var(--line); }
 	.links { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; margin-top: 22px; }
 	.btn {
 		padding: 9px 18px;
@@ -48,6 +48,7 @@
 	@media (max-width: 520px) {
 		.head img { width: 64px; height: 64px; border-radius: 16px; }
 		h1 { font-size: 1.4rem; }
+		.shots img { height: 300px; }
 	}
 </style>
 </head>
@@ -75,9 +76,11 @@
 		</ul>
 
 		<div class="shots">
-			<img src="img/01_gameplay.png" alt="Gameplay screen" loading="lazy">
-			<img src="img/02_menu.png" alt="Main menu" loading="lazy">
-			<img src="img/06_halloween_game.png" alt="Halloween event level" loading="lazy">
+			<img src="img/shot_1.webp" alt="Level 31: matching tulip tiles on an autumn board" loading="lazy">
+			<img src="img/shot_2.webp" alt="The Meow Paws cat waving over a garden fence" loading="lazy">
+			<img src="img/shot_3.webp" alt="Match tiles and clear the board" loading="lazy">
+			<img src="img/shot_4.webp" alt="Explore cozy scenes" loading="lazy">
+			<img src="img/shot_5.webp" alt="Use powerful boosters" loading="lazy">
 		</div>
 
 		<div class="links">
