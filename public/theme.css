@@ -52,3 +52,6 @@
 .store-badge small { display: block; font-size: 0.68rem; letter-spacing: 0.04em; text-transform: uppercase; }
 .store-badge strong { display: block; font-size: 1.1rem; font-weight: 600; }
 .store-badge:hover { opacity: 0.88; }
+/* App Store badge for apps not on iOS yet: same shape, not a link, dimmed. */
+.store-badge.soon { opacity: 0.55; cursor: default; }
+.store-badge.soon:hover { opacity: 0.55; }
