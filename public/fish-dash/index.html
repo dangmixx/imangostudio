@@ -11,7 +11,7 @@
 
   gtag('config', 'G-159BYFM0MK', { content_group: 'fish-dash' });
   document.addEventListener('click', function (e) {
-    var a = e.target.closest('.store-badge');
+    var a = e.target.closest('a.store-badge');
     if (a) gtag('event', 'store_click', { app: 'fish-dash', link_type: a.href.indexOf('/apps/testing/') > -1 ? 'test' : 'public' });
   });
 </script>
@@ -96,6 +96,7 @@
 
 		<div class="links">
 			<a class="store-badge" href="https://play.google.com/store/apps/details?id=com.dangmixx.fishdash&amp;referrer=utm_source%3Dimangostudio%26utm_medium%3Dwebsite%26utm_campaign%3Dfish-dash"><img src="../img/google-play.svg" alt=""><span><small>Get it on</small><strong>Google Play</strong></span></a>
+			<span class="store-badge soon" aria-label="App Store, coming soon"><img src="../img/app-store.svg" alt=""><span><small>Coming soon on</small><strong>App Store</strong></span></span>
 			<a class="btn" href="privacy/">Privacy Policy</a>
 		</div>
 	</section>
