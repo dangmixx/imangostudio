@@ -44,8 +44,8 @@
 	.tagline { margin: 0; color: var(--muted); }
 	.feature { width: 100%; height: auto; border-radius: 14px; margin: 20px 0 4px; display: block; }
 	ul { padding-left: 1.2em; margin: 0; }
-	.shots { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 20px; }
-	.shots img { width: 100%; height: auto; border-radius: 12px; border: 1px solid var(--line); }
+	.shots { display: flex; gap: 12px; margin-top: 20px; overflow-x: auto; padding-bottom: 6px; }
+	.shots img { height: 380px; width: auto; flex: none; border-radius: 12px; border: 1px solid var(--line); }
 	.links { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; margin-top: 22px; }
 	.btn {
 		padding: 9px 18px;
@@ -61,6 +61,7 @@
 	@media (max-width: 520px) {
 		.head img { width: 64px; height: 64px; border-radius: 16px; }
 		h1 { font-size: 1.4rem; }
+		.shots img { height: 300px; }
 	}
 </style>
 </head>
@@ -85,13 +86,16 @@
 			<li>Four kinds of puzzles: Identify, Match, Fix, and Build, where you drag blocks into place to assemble the solution.</li>
 			<li>10 classic patterns in three worlds (Structure, Behavior, Creation), plus comparison levels like Strategy vs State.</li>
 			<li>52 handcrafted levels, a Pattern Library, a Daily Challenge, achievements, and Mango the studious cat cheering you on.</li>
-			<li>Works offline, in English and Vietnamese.</li>
+			<li>Works offline, in six languages: English, Vietnamese, Spanish, French, Chinese, and Japanese.</li>
 		</ul>
 
 		<div class="shots">
-			<img src="img/01-identify.png" alt="Identify level" loading="lazy">
-			<img src="img/03-reveal.png" alt="Pattern reveal" loading="lazy">
-			<img src="img/04-build.png" alt="Build level" loading="lazy">
+			<img src="img/shot_1.webp" alt="Learn design patterns step by step" loading="lazy">
+			<img src="img/shot_2.webp" alt="Singleton lesson with simple explanations" loading="lazy">
+			<img src="img/shot_3.webp" alt="Practice with fun quizzes" loading="lazy">
+			<img src="img/shot_4.webp" alt="Quiz: which pattern ensures a class has only one instance" loading="lazy">
+			<img src="img/shot_5.webp" alt="Explore all design patterns by category" loading="lazy">
+			<img src="img/shot_6.webp" alt="Track your progress and daily streak" loading="lazy">
 		</div>
 
 		<div class="links">
