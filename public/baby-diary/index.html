@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-159BYFM0MK"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-159BYFM0MK', { content_group: 'baby-diary' });
+  document.addEventListener('click', function (e) {
+    var a = e.target.closest('a.store-badge');
+    if (a) gtag('event', 'store_click', { app: 'baby-diary', link_type: a.href.indexOf('/apps/testing/') > -1 ? 'test' : 'public' });
+  });
+</script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Baby Diary</title>
+<meta name="description" content="Baby Diary, a baby tracker for Android by iMango Studio. Track feeding, sleep, diapers, growth and milestones; everything stays on your phone.">
+<link rel="icon" href="img/icon.png" type="image/png">
+<link rel="stylesheet" href="../theme.css">
+<style>
+	* { box-sizing: border-box; }
+	body {
+		margin: 0;
+		background: var(--bg);
+		color: var(--text);
+		font: 16px/1.65 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+	}
+	main { max-width: 820px; margin: 0 auto; padding: 24px 16px 64px; }
+	.back { display: inline-block; margin-bottom: 16px; text-decoration: none; }
+	h1 { margin: 0; font-size: 1.8rem; }
+	h2 { margin: 24px 0 8px; font-size: 1.05rem; }
+	section {
+		background: var(--panel);
+		border: 1px solid var(--line);
+		border-radius: 20px;
+		padding: 24px;
+		margin-bottom: 24px;
+	}
+	.head { display: flex; gap: 18px; align-items: center; }
+	.head img { width: 88px; height: 88px; border-radius: 22px; flex: none; }
+	.tagline { margin: 0; color: var(--muted); }
+	.feature { width: 100%; height: auto; border-radius: 14px; margin: 20px 0 4px; display: block; }
+	ul { padding-left: 1.2em; margin: 0; }
+	.shots { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; margin-top: 20px; }
+	.shots img { width: 100%; height: auto; border-radius: 18px; border: 1px solid var(--line); }
+	.links { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; margin-top: 22px; }
+	.btn {
+		padding: 9px 18px;
+		border-radius: 999px;
+		border: 1px solid var(--line);
+		color: var(--text);
+		text-decoration: none;
+		background: var(--bg);
+	}
+	.btn.primary { background: var(--accent); border-color: var(--accent); color: var(--accent-text); font-weight: 600; }
+	a { color: var(--accent); }
+	footer { color: var(--muted); font-size: 0.9rem; text-align: center; }
+	@media (max-width: 520px) {
+		.head img { width: 64px; height: 64px; border-radius: 16px; }
+		h1 { font-size: 1.4rem; }
+	}
+</style>
+</head>
+<body>
+<main>
+	<a class="back" href="../">← iMango Studio</a>
+
+	<section>
+		<div class="head">
+			<img src="img/icon.png" alt="Baby Diary icon">
+			<div>
+				<h1>Baby Diary</h1>
+				<p class="tagline">A gentle baby tracker: feeding, sleep, diapers, growth and milestones, all in one simple daily diary for your baby's first years.</p>
+			</div>
+		</div>
+
+		<img class="feature" src="img/feature.png" alt="Baby Diary feature graphic — track feeding, sleep, diaper, growth and milestones">
+
+		<h2>Features</h2>
+		<ul>
+			<li>Track feeding — breastfeeding, bottle and solids — with times, amounts and side.</li>
+			<li>Log sleep, naps and night sleep, and see how long your baby rested.</li>
+			<li>Note every diaper change: wet, dirty or mixed.</li>
+			<li>Follow growth with weight, height and BMI plotted on the WHO growth charts.</li>
+			<li>Celebrate developmental milestones and follow the Wonder Weeks leaps by age.</li>
+			<li>Keep the vaccination schedule and health notes, with reminders for what's next.</li>
+			<li>A daily timeline, calendar and gentle reminders for the day's routine.</li>
+			<li>A photo diary to remember each little moment as your baby grows.</li>
+			<li>Daily, weekly and monthly statistics for feeding, sleep and diapers.</li>
+			<li>Light and dark mode; available in English and Vietnamese.</li>
+			<li>No account and no ads. Your baby's data stays on your phone.</li>
+		</ul>
+
+		<div class="shots">
+			<img src="img/shot-home.png" alt="Baby Diary home screen showing feeding, sleep, diaper and growth at a glance">
+			<img src="img/shot-diaper.png" alt="Baby Diary diaper tracker with wet, dirty and mixed counts and today's log">
+		</div>
+
+		<div class="links">
+			<a class="store-badge" href="https://play.google.com/apps/testing/com.imangostudio.babydiary"><img src="../img/google-play-test.svg" alt=""><span><small>Join the test on</small><strong>Google Play</strong></span></a>
+			<span class="store-badge soon" aria-label="Google Play, coming soon"><img src="../img/google-play.svg" alt=""><span><small>Coming soon on</small><strong>Google Play</strong></span></span>
+			<span class="store-badge soon" aria-label="App Store, coming soon"><img src="../img/app-store.svg" alt=""><span><small>Coming soon on</small><strong>App Store</strong></span></span>
+		</div>
+	</section>
+
+	<section id="contact">
+		<h2>Contact</h2>
+		<p>Support, feedback and business enquiries: <a href="mailto:imangostudio.support@gmail.com">imangostudio.support@gmail.com</a></p>
+	</section>
+
+	<footer>© 2026 iMango Studio · <a href="../privacy/">Privacy Policy</a> · <a href="../terms/">Terms of Service</a></footer>
+</main>
+</body>
+</html>
