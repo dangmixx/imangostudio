@@ -40,12 +40,12 @@
 
 <article id="en" lang="en">
 <h1>Meow Widget — Privacy Policy</h1>
-<p class="meta">iMango Studio · Effective date: 2026-10-29</p>
+<p class="meta">iMango Studio · Effective date: 2026-11-18</p>
 
-<p>Meow Widget ("the app") is an Android virtual pet made by iMango Studio ("we"): a cat you feed, pet and play with, which can also float above your other apps. This policy explains what the app handles and why.</p>
+<p>Meow Widget ("the app") is a virtual pet for Android and iPhone made by iMango Studio ("we"): a cat you feed, pet and play with, which on Android can also float above your other apps and on iPhone lives in a Home Screen widget. Sections 1 to 6 describe the Android app; section 7 says how the iPhone app differs. This policy explains what the app handles and why.</p>
 
 <h2>1. Summary</h2>
-<p>Your cat lives entirely on your phone. We (iMango Studio) don't collect any personal data, and no servers of ours receive data from the app. If the app crashes, it sends a technical crash report through Google's Firebase Crashlytics so we can fix the bug (section 5). It also sends anonymous usage statistics through Google Analytics for Firebase, such as which care actions are used and which features are switched on, so we know what to improve (section 6). You can turn either off in Settings. The app also includes Google's AdMob SDK so that the Settings screen may show a banner ad; when it does, the AdMob SDK collects some device data to show ads, as described in section 4. The main screen and the floating cat never show ads. Your cat, its name, its history and your settings stay on your phone and are never shared with AdMob or anyone else. We don't sell any data.</p>
+<p>Your cat lives entirely on your phone. We (iMango Studio) don't collect any personal data, and no servers of ours receive data from the app. If the app crashes, it sends a technical crash report through Google's Firebase Crashlytics so we can fix the bug (section 5). It also sends anonymous usage statistics through Google Analytics for Firebase, such as which care actions are used and which features are switched on, so we know what to improve (section 6). You can turn either off in Settings. The app also includes Google's AdMob SDK: the Settings screen may show a banner ad, and a short video ad plays only if you choose to double a gift with the "x2 gift" button. When an ad is requested, the AdMob SDK collects some device data to show it, as described in section 4. The main screen and the floating cat never show ads. Your cat, its name, its history and your settings stay on your phone and are never shared with AdMob or anyone else. We don't sell any data.</p>
 
 <h2>2. What the app accesses on your device</h2>
 <div class="wrap"><table>
@@ -54,7 +54,7 @@
 <tr><td>Foreground service</td><td>Keep the floating cat on screen while you use other apps</td><td>Runs on your phone only; stops when you turn floating mode off</td></tr>
 <tr><td>Notifications</td><td>Show the notification Android requires while the cat floats, with Hide / Show / Turn off buttons; and, only if you turn reminders on in Settings, a reminder when your cat gets hungry</td><td>Local only; the reminder is worked out and shown on your phone</td></tr>
 <tr><td>Vibration (haptic feedback)</td><td>A short tick when you pick the floating cat up or drag it over the ✕</td><td>Local only</td></tr>
-<tr><td>Internet</td><td>Send crash reports (section 5) and usage statistics (section 6) and, through the Google AdMob SDK, load the banner ad on the Settings screen (section 4)</td><td>See sections 4, 5 and 6</td></tr>
+<tr><td>Internet</td><td>Send crash reports (section 5) and usage statistics (section 6) and, through the Google AdMob SDK, load ads: the banner on the Settings screen and the video you ask for with "x2 gift" (section 4)</td><td>See sections 4, 5 and 6</td></tr>
 <tr><td>Advertising ID</td><td>Used only by the Google AdMob SDK</td><td>Sent to Google to request and measure ads, see section 4</td></tr>
 </table></div>
 <p>You can turn off display over other apps and notifications in Android settings at any time. Without them your cat simply stays inside the app.</p>
@@ -64,7 +64,12 @@
 <p>If you use Backup &amp; restore in Settings, the app writes your cat (the data above, without your settings) to a file in a place you choose with Android's file picker, and reads it back only when you pick it to restore. The file stays where you put it; we never receive it.</p>
 
 <h2>4. Advertising (Google AdMob)</h2>
-<p>The Settings screen may show a banner ad from Google AdMob, a third-party service run by Google. Ads never appear on the main screen, on the floating cat or above other apps. To serve, measure and personalize ads and to prevent fraud, the AdMob SDK may collect:</p>
+<p>The app shows ads from Google AdMob, a third-party service run by Google, in two places only:</p>
+<ul>
+<li>a banner ad that may appear on the Settings screen;</li>
+<li>a short video ad (a rewarded ad) that plays only when you tap "x2 gift" after opening a gift your cat brought home. Watching it to the end counts that gift twice in your collection. It is always your choice: nothing is lost if you don't watch it, and no video plays unless you tap the button.</li>
+</ul>
+<p>Ads never appear on the main screen, on the floating cat, on the widget or above other apps. To serve, measure and personalize ads and to prevent fraud, the AdMob SDK may collect:</p>
 <ul>
 <li>Device identifiers, such as the Android advertising ID</li>
 <li>Your IP address and the approximate location derived from it</li>
@@ -72,7 +77,7 @@
 <li>Diagnostics, such as ad performance and crash data from the SDK</li>
 </ul>
 <p>This data goes directly to Google, not to us, and is handled under <a href="https://policies.google.com/privacy" rel="noopener">Google's Privacy Policy</a>. See <a href="https://policies.google.com/technologies/partner-sites" rel="noopener">how Google uses information from apps that use its services</a>.</p>
-<p>In the European Economic Area, the United Kingdom and Switzerland, the app asks for your consent with Google's consent form before any ad is requested, and you can change your choice at any time in Settings → Ad privacy choices. Anywhere, you can limit personalized ads by resetting or deleting your advertising ID in Android settings (Settings → Privacy → Ads, or Settings → Google → Ads, depending on your phone). If your phone is offline or no ad is available, no banner is shown.</p>
+<p>In the European Economic Area, the United Kingdom and Switzerland, the app asks for your consent with Google's consent form before any ad is requested, and you can change your choice at any time in Settings → Ad privacy choices. Anywhere, you can limit personalized ads by resetting or deleting your advertising ID in Android settings (Settings → Privacy → Ads, or Settings → Google → Ads, depending on your phone). If your phone is offline or no ad is available, no banner is shown and "x2 gift" says that no ad is available right now.</p>
 
 <h2>5. Crash reports (Firebase Crashlytics)</h2>
 <p>When the app crashes, Firebase Crashlytics, a service run by Google for us, sends a crash report so we can find and fix the problem. A report contains:</p>
@@ -88,19 +93,31 @@
 <ul>
 <li>Care actions: feed, pet or play, and whether the cat accepted or why not (for example, still full or asleep)</li>
 <li>Friendship levels reached and finishing the first-launch screens</li>
+<li>Gifts your cat brings home from an outing (which gift, how rare, whether it is new) and gifts doubled with "x2 gift"</li>
 <li>Which features are switched on: floating mode, reminders, quiet hours, sound</li>
 <li>App use measured by Firebase itself: app opens, how long the app is used, screens viewed, app version, your phone's model, Android version, language and country (from the IP address, which is not stored)</li>
 <li>A random identifier for this installation of the app</li>
 </ul>
 <p>They never include your cat's name, anything you type, an account or your advertising ID, and they are not used for ads or ad personalization. We see them only as totals in Google Analytics, which keeps them for 12 months; see <a href="https://firebase.google.com/support/privacy" rel="noopener">Privacy and Security in Firebase</a>. To stop sending them, turn off Settings → Send usage statistics.</p>
 
-<h2>7. Children</h2>
-<p>Meow Widget does not knowingly collect personal information from children. The app collects nothing that identifies the person using it; crash reports (section 5) are technical only, usage statistics (section 6) are anonymous, and ads, where shown, come from Google AdMob as described in section 4. There are no purchases, no chat and no way to share data with other people.</p>
+<h2>7. On iPhone (iOS)</h2>
+<p>The iPhone app works the same way, with these differences:</p>
+<ul>
+<li><strong>Ads, but no tracking.</strong> Like the Android app, the iPhone app shows a Google AdMob banner on the Settings screen and a video ad only when you tap "x2 gift" on a gift, as described in section 4, and never anywhere else (never on the widget). On iPhone it never reads the advertising identifier (IDFA), shows no App Tracking Transparency prompt and does not track you across apps or websites; ads are non-personalized unless you consent. In the European Economic Area, the United Kingdom and Switzerland the app asks for your consent with Google's form before any ad, and you can change it at any time in Settings &rarr; Ad privacy choices.</li>
+<li><strong>No floating cat.</strong> iOS does not let apps draw over other apps; your cat lives in the app and in its Home Screen widget instead. The app asks for no permission except notifications.</li>
+<li><strong>Notifications.</strong> Only if you turn reminders on in Settings, the app asks iOS for permission and then schedules one local notification on your phone for when your cat gets hungry. Nothing is sent to a server.</li>
+<li><strong>Stored data.</strong> The data in section 3 is kept on your iPhone in storage the app shares only with its own widget. Like all app data on iPhone, it is part of your iPhone's own backups (iCloud or computer) if you make them. Deleting the app removes it.</li>
+<li><strong>Backup &amp; restore</strong> uses the iPhone's file picker; the file is the same format as on Android, so you can move your cat between phones.</li>
+<li><strong>Crash reports and usage statistics</strong>, when the iPhone app sends them, work as in sections 5 and 6 (with the iOS version instead of the Android version) and can be turned off the same way in Settings.</li>
+</ul>
 
-<h2>8. Changes</h2>
+<h2>8. Children</h2>
+<p>Meow Widget does not knowingly collect personal information from children. The app collects nothing that identifies the person using it; crash reports (section 5) are technical only, usage statistics (section 6) are anonymous, and ads, where shown (the Settings banner and the optional "x2 gift" video), come from Google AdMob as described in section 4. There are no purchases, no chat and no way to share data with other people.</p>
+
+<h2>9. Changes</h2>
 <p>If this policy changes, we update this page and the effective date above.</p>
 
-<h2>9. Contact</h2>
+<h2>10. Contact</h2>
 <p>iMango Studio · <a href="mailto:imangostudio.support@gmail.com">imangostudio.support@gmail.com</a></p>
 </article>
 </main>
