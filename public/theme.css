@@ -55,3 +55,55 @@
 /* App Store badge for apps not on iOS yet: same shape, not a link, dimmed. */
 .store-badge.soon { opacity: 0.55; cursor: default; }
 .store-badge.soon:hover { opacity: 0.55; }
+
+/* Homepage palette. Other pages use the shared colors above. */
+.home {
+	--home-bg: #eeeffb;
+	--home-panel: #f9f9ff;
+	--home-card-end: #f0f1fc;
+	--home-header-end: #e4e3f8;
+	--home-text: #19163e;
+	--home-muted: #4e4c79;
+	--home-line: #dddef2;
+	--home-accent: #5944aa;
+	--home-purple: #4d52c9;
+	--home-violet: #734aba;
+	--home-android: #34792a;
+	--home-canvas: #424687;
+	--home-hero-bg: #e1e0fa;
+	--home-hero-text: #fffaff;
+	--home-hero-muted: #f0edff;
+	--home-shadow: #32276417;
+	--home-banner-wash: #eeecfcdf;
+	--home-contact-wash: #47418ac2;
+}
+:root[data-theme="dark"] .home {
+	--home-bg: #15152a;
+	--home-panel: #242341;
+	--home-card-end: #201f3a;
+	--home-header-end: #2f2a50;
+	--home-text: #f6f2ff;
+	--home-muted: #d2caeb;
+	--home-line: #403c61;
+	--home-accent: #cfbfff;
+	--home-android: #8bd276;
+	--home-hero-bg: #302a50;
+	--home-shadow: #100d2238;
+	--home-banner-wash: #221d3aeb;
+}
+@media (prefers-color-scheme: dark) {
+	:root:not([data-theme="light"]) .home {
+		--home-bg: #15152a;
+		--home-panel: #242341;
+		--home-card-end: #201f3a;
+		--home-header-end: #2f2a50;
+		--home-text: #f6f2ff;
+		--home-muted: #d2caeb;
+		--home-line: #403c61;
+		--home-accent: #cfbfff;
+		--home-android: #8bd276;
+		--home-hero-bg: #302a50;
+		--home-shadow: #100d2238;
+		--home-banner-wash: #221d3aeb;
+	}
+}

@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
 <meta charset="utf-8">
 <!-- Google tag (gtag.js) -->
@@ -19,23 +19,40 @@
      no internet-based SDKs (analytics, ads, crash reporting, leaderboards, accounts).
      Section 5 covers this website itself (GA4 tag G-159BYFM0MK on every page), not the apps. -->
 <link rel="stylesheet" href="../theme.css">
-<style>
-	* { box-sizing: border-box; }
-	body { margin: 0; background: var(--bg); color: var(--text); font: 16px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
-	main { max-width: 760px; margin: 0 auto; padding: 32px 16px 64px; }
-	article { background: var(--panel); border: 2px solid var(--line); border-radius: 20px; padding: 24px 22px; margin-bottom: 28px; }
-	h1 { font-size: 1.7rem; margin: 0 0 4px; }
-	h2 { font-size: 1.15rem; margin: 28px 0 6px; }
-	p, li { margin: 6px 0; }
-	.meta { color: var(--muted); font-size: .92rem; }
-	a { color: var(--accent); }
-	.back { display: inline-block; margin-bottom: 16px; text-decoration: none; }
-</style>
+<link rel="stylesheet" href="../home.css">
+<link rel="stylesheet" href="../legal.css">
+<script src="../site-theme.js" defer></script>
+<script src="../legal.js" defer></script>
 </head>
-<body>
-<main>
-<a class="back" href="../">← iMango Studio</a>
-
+<body class="home legal-page">
+    <a class="skip-link" href="#legal-content">Skip to document</a>
+        <div class="header-bar">
+            <header class="site-header container" id="top">
+                <a class="brand" href="../"><span class="brand-mark"><img src="../img/home-paw.svg" width="27" height="22" alt=""></span> iMango Studio</a>
+                <nav aria-label="Main navigation">
+                    <a href="../">Home</a>
+                    <a href="../#games">Games &amp; Apps</a>
+                    <a href="../#about">About</a>
+                    <a href="../#contact">Contact</a>
+                </nav>
+                <button class="theme-toggle" type="button" aria-pressed="false" hidden>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+                        <path d="M21 13.2A9 9 0 0 1 10.8 3a9 9 0 1 0 10.2 10.2Z" stroke-linejoin="round"/>
+                    </svg>
+                    Dark mode
+                </button>
+            </header>
+        </div>
+    <main class="container legal-main">
+        <nav class="legal-nav" aria-label="Legal navigation">
+            <a class="back" href="../">← iMango Studio</a>
+            <div class="legal-tabs">
+                <span aria-current="page">Privacy Policy</span>
+                <a href="../terms/">Terms of Service</a>
+            </div>
+        </nav>
+        <div class="legal-layout">
+            <div class="legal-document" id="legal-content">
 <article id="en" lang="en">
 <h1>iMango Studio — Privacy Policy</h1>
 <p class="meta">Applies to all iMango Studio apps and games · Effective date: 2026-11-07</p>
@@ -69,6 +86,12 @@
 <h2>8. Contact</h2>
 <p>iMango Studio · <a href="mailto:imangostudio.support@gmail.com">imangostudio.support@gmail.com</a></p>
 </article>
-</main>
+            </div>
+            <nav class="legal-toc" aria-labelledby="legal-toc-title" hidden>
+                <h2 id="legal-toc-title">On this page</h2>
+                <ol></ol>
+            </nav>
+        </div>
+    </main>
 </body>
 </html>

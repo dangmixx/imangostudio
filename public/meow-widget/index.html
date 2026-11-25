@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
 <meta charset="utf-8">
 <!-- Google tag (gtag.js) -->
@@ -20,97 +20,128 @@
 <meta name="description" content="Meow Widget, a cuddly virtual cat for Android and iOS that you feed, pet and play with, and that can float above your other apps. By iMango Studio.">
 <link rel="icon" href="img/icon.png" type="image/png">
 <link rel="stylesheet" href="../theme.css">
-<style>
-	* { box-sizing: border-box; }
-	body {
-		margin: 0;
-		background: var(--bg);
-		color: var(--text);
-		font: 16px/1.65 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
-	}
-	main { max-width: 820px; margin: 0 auto; padding: 24px 16px 64px; }
-	.back { display: inline-block; margin-bottom: 16px; text-decoration: none; }
-	h1 { margin: 0; font-size: 1.8rem; }
-	h2 { margin: 24px 0 8px; font-size: 1.05rem; }
-	#contact h2 { margin-top: 0; }
-	section {
-		background: var(--panel);
-		border: 1px solid var(--line);
-		border-radius: 20px;
-		padding: 24px;
-		margin-bottom: 24px;
-	}
-	.head { display: flex; gap: 18px; align-items: center; }
-	.head img { width: 88px; height: 88px; border-radius: 22px; flex: none; }
-	.tagline { margin: 0; color: var(--muted); }
-	.feature { width: 100%; height: auto; border-radius: 14px; margin: 20px 0 4px; display: block; }
-	ul { padding-left: 1.2em; margin: 0; }
-	.shots { display: flex; justify-content: center; gap: 12px; margin-top: 20px; }
-	.shots img { height: 380px; width: auto; flex: none; border-radius: 12px; border: 1px solid var(--line); }
-	.links { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; margin-top: 22px; }
-	.btn {
-		padding: 9px 18px;
-		border-radius: 999px;
-		border: 1px solid var(--line);
-		color: var(--text);
-		text-decoration: none;
-		background: var(--bg);
-	}
-	a { color: var(--accent); }
-	footer { color: var(--muted); font-size: 0.9rem; text-align: center; }
-	@media (max-width: 520px) {
-		.head img { width: 64px; height: 64px; border-radius: 16px; }
-		h1 { font-size: 1.4rem; }
-		.shots img { height: 300px; }
-	}
-</style>
+<link rel="stylesheet" href="../home.css">
+<link rel="stylesheet" href="../detail.css">
+<script src="../site-theme.js" defer></script>
+<script src="../detail.js" defer></script>
 </head>
-<body>
-<main>
-	<a class="back" href="../">← iMango Studio</a>
+<body class="home detail-page">
+    <a class="skip-link" href="#app-title">Skip to app details</a>
+        <div class="header-bar">
+            <header class="site-header container" id="top">
+                <a class="brand" href="../"><span class="brand-mark"><img src="../img/home-paw.svg" width="27" height="22" alt=""></span> iMango Studio</a>
+                <nav aria-label="Main navigation">
+                    <a href="../">Home</a>
+                    <a href="../#games" aria-current="true">Games &amp; Apps</a>
+                    <a href="../#about">About</a>
+                    <a href="#contact">Contact</a>
+                </nav>
+                <button class="theme-toggle" type="button" aria-pressed="false" hidden>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+                        <path d="M21 13.2A9 9 0 0 1 10.8 3a9 9 0 1 0 10.2 10.2Z" stroke-linejoin="round"/>
+                    </svg>
+                    Dark mode
+                </button>
+            </header>
+        </div>
+    <main>
+        <div class="detail-banner">
+            <div class="container">
+                <nav class="breadcrumb" aria-label="Breadcrumb">
+                    <a href="../#games">Games &amp; Apps</a>
+                    <span aria-hidden="true">›</span>
+                    <span aria-current="page">Meow Widget</span>
+                </nav>
+                <section class="detail-hero" aria-labelledby="app-title">
+                    <div class="detail-intro">
+                        <img class="detail-icon" width="120" height="120" src="img/icon.png" alt="Meow Widget icon">
+                        <div>
+                            <h1 id="app-title">Meow Widget</h1>
+                            <p class="detail-tagline">A cuddly calico cat to look after, who can float above your other apps and keep you company.</p>
+                            <ul class="platforms detail-platforms" aria-label="Category and platforms" role="list">
+                                <li>Virtual pet</li>
+                            <li data-platform="android"><svg aria-hidden="true"><use href="../img/home-platforms.svg#android"></use></svg> Android</li>
+                            <li data-platform="ios"><svg aria-hidden="true"><use href="../img/home-platforms.svg#ios"></use></svg> iOS</li>
+                            </ul>
+                            <div class="detail-store-links">
+                                <a class="store-badge" href="https://play.google.com/store/apps/details?id=com.imangostudio.meowwidget&amp;referrer=utm_source%3Dimangostudio%26utm_medium%3Dwebsite%26utm_campaign%3Dmeow-widget"><img src="../img/google-play.svg" alt=""><span><small>Get it on</small><strong>Google Play</strong></span></a>
+                                <a class="store-badge" href="https://apps.apple.com/app/id6830992357"><img src="../img/app-store.svg" alt=""><span><small>Download on the</small><strong>App Store</strong></span></a>
+                            </div>
+                        </div>
+                    </div>
+                    <img class="detail-feature" width="1024" height="500" src="img/feature.png" alt="Meow Widget: take care of Mochi, play, daily scenes, dress up, keep Mochi happy and Mochi on your screen">
+                </section>
+            </div>
+        </div>
+        <div class="container">
 
-	<section>
-		<div class="head">
-			<img src="img/icon.png" alt="Meow Widget icon">
-			<div>
-				<h1>Meow Widget</h1>
-				<p class="tagline">A cuddly calico cat to look after, who can float above your other apps and keep you company.</p>
-			</div>
-		</div>
+        <section class="detail-gallery" aria-labelledby="screenshots-title">
+            <div class="gallery-heading">
+                <h2 id="screenshots-title">Screenshots</h2>
+                <div class="gallery-controls" hidden>
+                    <button type="button" data-direction="-1" aria-label="Previous screenshots" aria-controls="screenshots">‹</button>
+                    <button type="button" data-direction="1" aria-label="Next screenshots" aria-controls="screenshots">›</button>
+                </div>
+            </div>
+            <div class="gallery-strip" id="screenshots" tabindex="0" role="region" aria-label="App screenshots">
+                <img width="941" height="1672" src="img/shot_1.webp" alt="Take care of Mochi: the home screen with mood, energy and fullness, and Feed, Pet and Play" loading="lazy">
+                <img width="941" height="1672" src="img/shot_2.webp" alt="Play and interact: Mochi happy, sleeping, playing, sitting, lying down and stretching" loading="lazy">
+            </div>
+        </section>
 
-		<img class="feature" src="img/feature.png" alt="Meow Widget: take care of Mochi, play, daily scenes, dress up, keep Mochi happy and Mochi on your screen">
-
-		<h2>Features</h2>
-		<ul>
-			<li>Feed, pet and play with your cat a little every day; its mood, energy and fullness follow how you care for it.</li>
-			<li>Tap it to play, stroke its back and it leans into your finger, purrs and sends up hearts.</li>
-			<li>Friendship levels that grow with every bit of care, from "New friend" to "Soulmate", and a diary of meals, pets, play and outings.</li>
-			<li>Now and then your cat heads out for a stroll and brings you back a gift.</li>
-			<li>Its room changes through the day: living room in the morning, desk in the afternoon, balcony at sunset, bedroom at night.</li>
-			<li>Floating mode: your cat sits in a corner of the screen above any app. Hold it to move it, drop it on ✕ to send it home, double-tap it to open the app.</li>
-			<li>Three sizes and adjustable transparency, an occasional walk along the screen, meows and purrs with quiet hours at night.</li>
-			<li>Optional reminders when your cat is hungry, and a backup file to bring your cat to a new phone.</li>
-			<li>English, Vietnamese, Japanese, Simplified Chinese and French.</li>
-			<li>No account and no ad tracking; your cat and its name stay on your phone. Only anonymous usage statistics and crash reports are sent, and you can turn both off in Settings.</li>
-		</ul>
-
-		<div class="shots">
-			<img src="img/shot_1.webp" alt="Take care of Mochi: the home screen with mood, energy and fullness, and Feed, Pet and Play" loading="lazy">
-			<img src="img/shot_2.webp" alt="Play and interact: Mochi happy, sleeping, playing, sitting, lying down and stretching" loading="lazy">
-		</div>
-
-		<div class="links">
-			<a class="store-badge" href="https://play.google.com/store/apps/details?id=com.imangostudio.meowwidget&amp;referrer=utm_source%3Dimangostudio%26utm_medium%3Dwebsite%26utm_campaign%3Dmeow-widget"><img src="../img/google-play.svg" alt=""><span><small>Get it on</small><strong>Google Play</strong></span></a>
-			<a class="store-badge" href="https://apps.apple.com/app/id6830992357"><img src="../img/app-store.svg" alt=""><span><small>Download on the</small><strong>App Store</strong></span></a>
-		</div>
-	</section>
-
-	<section id="contact">
-		<h2>Contact</h2>
-		<p>Support, feedback and business enquiries: <a href="mailto:imangostudio.support@gmail.com">imangostudio.support@gmail.com</a></p>
-	</section>
-
-	<footer>© 2026 iMango Studio · <a href="privacy/">Privacy Policy</a> · <a href="terms/">Terms of Service</a></footer>
-</main>
+        <div class="detail-columns">
+            <section aria-labelledby="features-title">
+                <h2 id="features-title">Features</h2>
+                <ul class="detail-features" role="list">
+                    <li>Feed, pet and play with your cat a little every day; its mood, energy and fullness follow how you care for it.</li>
+                    <li>Tap it to play, stroke its back and it leans into your finger, purrs and sends up hearts.</li>
+                    <li>Friendship levels that grow with every bit of care, from "New friend" to "Soulmate", and a diary of meals, pets, play and outings.</li>
+                    <li>Now and then your cat heads out for a stroll and brings you back a gift.</li>
+                    <li>Its room changes through the day: living room in the morning, desk in the afternoon, balcony at sunset, bedroom at night.</li>
+                    <li>Floating mode: your cat sits in a corner of the screen above any app. Hold it to move it, drop it on ✕ to send it home, double-tap it to open the app.</li>
+                    <li>Three sizes and adjustable transparency, an occasional walk along the screen, meows and purrs with quiet hours at night.</li>
+                    <li>Optional reminders when your cat is hungry, and a backup file to bring your cat to a new phone.</li>
+                    <li>English, Vietnamese, Japanese, Simplified Chinese and French.</li>
+                    <li>No account and no ad tracking; your cat and its name stay on your phone. Only anonymous usage statistics and crash reports are sent, and you can turn both off in Settings.</li>
+                </ul>
+            </section>
+            <aside class="detail-info" aria-labelledby="info-title">
+                <h2 id="info-title">App Information</h2>
+                <dl>
+                    <div><dt>Category</dt><dd>Virtual pet</dd></div>
+                    <div><dt>Platforms</dt><dd>Android, iOS</dd></div>
+                </dl>
+                <h2>Links</h2>
+                <ul>
+                    <li><a href="privacy/">Privacy Policy</a></li>
+                    <li><a href="mailto:imangostudio.support@gmail.com">Support</a></li>
+                </ul>
+            </aside>
+        </div>
+        <section class="related-apps" aria-labelledby="related-title">
+            <header class="related-heading">
+                <h2 id="related-title">More from iMango Studio</h2>
+                <a class="related-all" href="../#games">View All Apps</a>
+            </header>
+            <div class="related-carousel" hidden>
+                <ul class="related-list" id="related-list" aria-label="Related apps" tabindex="0" role="list"></ul>
+                <div class="related-bottom" hidden>
+                    <div class="related-pagination" role="group" aria-label="App pages"></div>
+                    <div class="gallery-controls">
+                        <button type="button" data-direction="-1" aria-label="Previous apps" aria-controls="related-list">‹</button>
+                        <button type="button" data-direction="1" aria-label="Next apps" aria-controls="related-list">›</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="contact detail-contact" id="contact">
+            <div><h2>Contact</h2>
+                <p>Support, feedback and business enquiries: <a href="mailto:imangostudio.support@gmail.com">imangostudio.support@gmail.com</a></p></div>
+        </section>
+        </div>
+    </main>
+    <div class="detail-footer">
+        <footer class="site-footer container">© 2026 iMango Studio · <a href="privacy/">Privacy Policy</a> · <a href="terms/">Terms of Service</a></footer>
+    </div>
 </body>
 </html>

@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
 <meta charset="utf-8">
 <!-- Google tag (gtag.js) -->
@@ -15,36 +15,41 @@
 <title>Meow Paws Privacy Policy</title>
 <meta name="description" content="Privacy policy for Meow Paws, a cat tile-matching game by iMango Studio.">
 <link rel="stylesheet" href="../../theme.css">
-<style>
-	* { box-sizing: border-box; }
-	body {
-		margin: 0;
-		background: var(--bg);
-		color: var(--text);
-		font: 16px/1.65 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
-	}
-	main { max-width: 720px; margin: 0 auto; padding: 32px 16px 64px; }
-	header { margin-bottom: 24px; }
-	h1 { margin: 0 0 4px; font-size: 1.8rem; color: var(--accent); }
-	h2 { margin: 28px 0 8px; font-size: 1.15rem; }
-	.meta { color: var(--muted); font-size: 0.95rem; }
-	section {
-		background: var(--panel);
-		border: 1px solid var(--line);
-		border-radius: 16px;
-		padding: 8px 24px 24px;
-		margin-bottom: 24px;
-	}
-	ul { padding-left: 1.2em; }
-	a { color: var(--accent); }
-	footer { color: var(--muted); font-size: 0.9rem; text-align: center; }
-	.back { display: inline-block; margin-bottom: 16px; text-decoration: none; }
-</style>
+<link rel="stylesheet" href="../../home.css">
+<link rel="stylesheet" href="../../legal.css">
+<script src="../../site-theme.js" defer></script>
+<script src="../../legal.js" defer></script>
 </head>
-<body>
-<main>
-	<a class="back" href="../">← Meow Paws</a>
-	<header>
+<body class="home legal-page">
+    <a class="skip-link" href="#legal-content">Skip to document</a>
+        <div class="header-bar">
+            <header class="site-header container" id="top">
+                <a class="brand" href="../../"><span class="brand-mark"><img src="../../img/home-paw.svg" width="27" height="22" alt=""></span> iMango Studio</a>
+                <nav aria-label="Main navigation">
+                    <a href="../../">Home</a>
+                    <a href="../../#games">Games &amp; Apps</a>
+                    <a href="../../#about">About</a>
+                    <a href="../../#contact">Contact</a>
+                </nav>
+                <button class="theme-toggle" type="button" aria-pressed="false" hidden>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+                        <path d="M21 13.2A9 9 0 0 1 10.8 3a9 9 0 1 0 10.2 10.2Z" stroke-linejoin="round"/>
+                    </svg>
+                    Dark mode
+                </button>
+            </header>
+        </div>
+    <main class="container legal-main">
+        <nav class="legal-nav" aria-label="Legal navigation">
+            <a class="back" href="../">← Meow Paws</a>
+            <div class="legal-tabs">
+                <span aria-current="page">Privacy Policy</span>
+                <a href="../terms/">Terms of Service</a>
+            </div>
+        </nav>
+        <div class="legal-layout">
+            <div class="legal-document" id="legal-content">
+<header>
 		<h1>Meow Paws</h1>
 		<div class="meta">Privacy Policy</div>
 		<div class="meta">Effective: 4 October 2026 · iMango Studio</div>
@@ -115,6 +120,12 @@
 
 
 	<footer>© 2026 iMango Studio</footer>
-</main>
+            </div>
+            <nav class="legal-toc" aria-labelledby="legal-toc-title" hidden>
+                <h2 id="legal-toc-title">On this page</h2>
+                <ol></ol>
+            </nav>
+        </div>
+    </main>
 </body>
 </html>
